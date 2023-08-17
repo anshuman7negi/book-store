@@ -1,11 +1,5 @@
-
-
-const categories = ()=> {
-    return(
-        <div>
-            
-        </div>
-    )
-}
+const categories = () => (
+  <div />
+);
 
 export default categories;
