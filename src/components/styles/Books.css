@@ -1,0 +1,54 @@
+
+.AllBooks {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+}
+
+.BookCard {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 1rem;
+    width: 100%;
+    align-items: center;
+    gap: 2rem;
+}
+
+.SingleBook{
+    display: flex;
+    gap: 2rem;
+    border: 2px solid red;
+    padding: 2rem 8rem;
+}
+
+.RemoveBook,
+.AddBook {
+    padding: 0.4rem 1.6rem;
+    color: #fff;
+    background-color: #db5454;
+    border: none;
+}
+
+.BookForm {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 1rem;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 1rem;
+}
+
+form input {
+    padding: 0.5rem 0.6rem;
+    border: 2px solid red;
+}
+
+.AddBook {
+    background-color: aqua;
+    color: black;
+}
