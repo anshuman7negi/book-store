@@ -64,7 +64,7 @@ A BookStore is a single page application where you add and remove the books.
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-1. Go to this URL link: https://github.com/anshuman7negi/math-magicians
+1. Go to this URL link: https://github.com/anshuman7negi/book-store/tree/bookStore-setup
 2. clone the repo and start working on it.
 
 ### Prerequisites
