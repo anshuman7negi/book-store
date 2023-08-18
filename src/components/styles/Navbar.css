@@ -1,0 +1,22 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul {
+  display: flex;
+  list-style-type: none;
+  gap: 2rem;
+}
+
+.navbar ul li {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: black;
+}
