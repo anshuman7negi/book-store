@@ -1,14 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  books: [
-    {
-      id: 1,
-      title: 'Harry Potter',
-      author: 'J.K Rolling',
-      category: 'fictional',
-    },
-  ],
+  books: [],
 };
 
 const booksSlice = createSlice({
