@@ -1,36 +1,24 @@
-import AddBook from './AddBook';
+import React from 'react';
+import { useSelector } from 'react-redux';
 import Book from './Book';
+import AddBook from './AddBook';
 import './styles/Books.css';
 
 const Books = () => {
-  const allBooks = [
-    {
-      id: 1,
-      title: 'Harry Potter',
-      author: 'J.K Rolling',
-      category: 'Magic',
-    },
-    {
-      id: 2,
-      title: 'Harry Potter',
-      author: 'J.K Rolling',
-      category: 'Magic',
-    },
-  ];
+  const books = useSelector((state) => state.books.books);
 
   return (
     <div className="AllBooks">
       <div className="BookCard">
-        {
-                    allBooks.map((item) => (
-                      <Book
-                        key={item.id}
-                        title={item.title}
-                        author={item.author}
-                        category={item.category}
-                      />
-                    ))
-                }
+        {books.map((item) => (
+          <Book
+            key={item.id}
+            index={item.id}
+            title={item.title}
+            author={item.author}
+            category={item.category}
+          />
+        ))}
       </div>
       <AddBook />
     </div>
