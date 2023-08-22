@@ -20,7 +20,7 @@ const AddBook = () => {
     e.preventDefault();
     if (title && author) {
       const newBook = {
-        id: Date.now(),
+        item_id: Date.now(),
         title,
         author,
         category: 'Some Category',
