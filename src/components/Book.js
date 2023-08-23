@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { removeBook } from '../redux/books/bookSlice';
+import { fetchData } from '../redux/books/bookSlice';
 import './styles/Books.css';
 
 const Book = () => {
   const dispatch = useDispatch();
-  const books = useSelector((state) => state.books.books);
+  const booksData = useSelector((state) => state.books.books);
+
+  useEffect(() => {
+    dispatch(fetchData());
+  }, [dispatch]);
+
+  const books = Object.values(booksData).flatMap((item) => item);
 
   return (
     <div className="BookCard">
@@ -17,7 +23,6 @@ const Book = () => {
           <button
             className="RemoveBook"
             type="button"
-            onClick={() => dispatch(removeBook(item.item_id))}
           >
             Remove
           </button>
