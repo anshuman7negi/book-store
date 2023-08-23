@@ -44,3 +44,19 @@
   color: var(--black-two);
   text-decoration: none;
 }
+
+.oval {
+  display: flex;
+  align-items: center;
+  width: 1.063rem; 
+  height: 1.063rem; 
+  padding: 0.875rem;
+  border: solid 1px #e8e8e8;
+  border-radius: 50%;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile {
+  width: 1.063rem;
+  height: 1.063rem;
+}
