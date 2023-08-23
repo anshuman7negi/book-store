@@ -1,9 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500&display=swap');
+
 
 .AllBooks {
   display: flex;
   flex-direction: column;
-  height: 100vh;
   align-items: center;
+  background-color: #f5f6fa;
+  gap: 2rem;
+  min-height: 100vh;
 }
 
 .BookCard {
@@ -17,24 +22,193 @@
 
 .SingleBook {
   display: flex;
-  gap: 2rem;
-  border: 2px solid red;
-  padding: 2rem 8rem;
+  gap: 8rem;
+  align-items: center;
+  padding: 0.7rem 2rem;
+  border-radius: 4px;
+  border: solid 1px #fff;
+  background-color: #fff;
 }
 
-.RemoveBook,
-.AddBook {
-  padding: 0.4rem 1.6rem;
-  color: #fff;
-  background-color: #db5454;
+.bookDetailsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.4rem;
+}
+
+.category {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.title {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.375rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: #121212;
+}
+
+.author {
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.removeButton,
+.buttonContainer p {
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
   border: none;
+  background-color: #fff;
+}
+
+.progressBarContainer {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.progressResult {
+  height: 40px;
+}
+
+.progressBar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.percent {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.progressBar .text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.chapter {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.currentChapter {
+  opacity: 0.5;
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.chapterNumber {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: #121212;
+}
+
+.chapter button {
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  border-radius: 3px;
+  background-color: #0290ff;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
+  border:  none;
+}
+
+.AddBook {
+  padding: 0.801rem 1.188rem 0.886rem 1.375rem;
+  border-radius: 3px;
+  background-color: #0290ff;
+  border: none;
+  font-size: 0.813rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
 }
 
 .BookForm {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  max-width: 70%;
   gap: 1rem;
+}
+
+.bookTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888;
 }
 
 form {
@@ -43,12 +217,40 @@ form {
   gap: 1rem;
 }
 
-form input {
-  padding: 0.5rem 0.6rem;
-  border: 2px solid red;
+form input,
+.CategoryList {
+  padding: 0.813rem 1rem;;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+  font-size: 1rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.15px;
+  color: #121212;
 }
 
-.AddBook {
-  background-color: aqua;
-  color: black;
+.CategoryList {
+  width: 200px;
+}
+
+form input::placeholder {
+  color: #c4c4c4;
+}
+
+.Line {
+  height: 1.5rem;
+  border: solid 1px #e8e8e8;
+}
+
+.SecondLine {
+  height: 4.375rem;
+  border: solid 1px #e8e8e8;
+}
+
+.ThirdLine {
+  width: 70%;
+  border: solid 1px #e8e8e8;
 }
