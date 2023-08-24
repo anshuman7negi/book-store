@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import { deleteBook, fetchData } from '../redux/books/bookSlice';
+import 'react-circular-progressbar/dist/styles.css';
 import './styles/Books.css';
 
 const Book = () => {
@@ -22,20 +24,52 @@ const Book = () => {
 
   return (
     <div className="BookCard">
-      {books.map((item) => (
-        <div className="SingleBook" key={item.id}>
-          <h3>{item.title}</h3>
-          <p>{item.author}</p>
-          <p>{item.category}</p>
-          <button
-            className="RemoveBook"
-            type="button"
-            onClick={() => handleDelete(item.id)}
-          >
-            Remove
-          </button>
-        </div>
-      ))}
+      {books.map((item) => {
+        const randomProgress = Math.floor(Math.random() * 101);
+        return (
+          <div className="SingleBook" key={item.id}>
+            <div className="bookDetailsContainer">
+              <div className="details">
+                <p className="category">{item.category}</p>
+                <h3 className="title">{item.title}</h3>
+                <p className="author">{item.author}</p>
+              </div>
+              <div className="buttonContainer">
+                <p>comments</p>
+                <div className="Line" />
+                <button type="button" className="removeButton" onClick={() => handleDelete(item.id)}>
+                  Remove
+                </button>
+                <div className="Line" />
+                <p>edit</p>
+              </div>
+            </div>
+            <div className="progressBarContainer">
+              <CircularProgressbar
+                className="progressResult"
+                value={randomProgress}
+                styles={buildStyles({
+                  textColor: '#000',
+                  trailColor: '#d6d6d6',
+                })}
+              />
+              <div className="progressBar">
+                <p className="percent">
+                  {randomProgress}
+                  %
+                </p>
+                <p className="text">completed</p>
+              </div>
+            </div>
+            <div className="SecondLine" />
+            <div className="chapter">
+              <p className="currentChapter">Current Chapter</p>
+              <p className="chapterNumber">Chapter 17</p>
+              <button type="submit">Update Progress</button>
+            </div>
+          </div>
+        );
+      })}
 
     </div>
   );

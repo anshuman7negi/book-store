@@ -1,8 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 1rem 3rem;
+  padding: 1.438rem 6.188rem 1.688rem 6.25rem;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.firstContainer {
+  display: flex;
+}
+
+.firstContainer h1 {
+  width: 15rem;
+  height: 2.313rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #0290ff;
 }
 
 .navbar ul {
@@ -17,6 +36,29 @@
 }
 
 .navbar ul li a {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.813rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: var(--black-two);
   text-decoration: none;
-  color: black;
+}
+
+.oval {
+  display: flex;
+  align-items: center;
+  width: 1.063rem;
+  height: 1.063rem;
+  padding: 0.875rem;
+  border: solid 1px #e8e8e8;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile {
+  width: 1.063rem;
+  height: 1.063rem;
 }

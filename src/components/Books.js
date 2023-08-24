@@ -6,6 +6,7 @@ import './styles/Books.css';
 const Books = () => (
   <div className="AllBooks">
     <Book />
+    <div className="ThirdLine" />
     <AddBook />
   </div>
 );
